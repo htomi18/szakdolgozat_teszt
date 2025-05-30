@@ -3,5 +3,5 @@
         {{ $job['title'] }}
     </x-slot:heading>
 
-    <p>Salary: {{$job['salary']}} per year</p>
+    <p><strong>Salary:</strong> {{$job['salary']}} per year</p>
 </x-layout>

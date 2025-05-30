@@ -18,8 +18,9 @@ Route::get('/contact', function () {
 });
 
 Route::get('/jobs', function () {
+    $job = Job::with('employer')->get(); // Lekérjük az összes job-ot a Job modelből
     return view('jobs', [
-        'jobs' => Job::all()
+        'jobs' => $job // Átadjuk a lekért job-okat a view-nak
     ]);
 });
 
